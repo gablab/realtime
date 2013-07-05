@@ -585,7 +585,19 @@ else:
                     patch_2.setAutoDraw(False)
                 t = ThermBase(win, [0.25,1],[-0.125,-0.5])
                 if FB:
-                    t.plot(fb,th,arrow,frameN)
+                    if fb > 3:
+                       fb_ = 3
+                    elif fb < -3:
+                       fb_ = -3
+                    else:
+                       fb_ = fb
+                    if th >3:
+                       th_ = 2.8
+                    elif th<-3:
+                       th_ = -2.8
+                    else:
+                       th_ = th
+                    t.plot(fb_,th_,arrow,frameN)
                 t.draw()
                 
                 #check if all components have finished
@@ -789,7 +801,19 @@ else:
             
             t = ThermBase(win, [0.25,1],[-0.125,-0.5])
             if FB:
-                t.plot(fb,th,arrow,frameN)
+                if fb > 3:
+                    fb_ = 3
+                elif fb < -3:
+                    fb_ = -3
+                else:
+                    fb_ = fb
+                if th > 3:
+                    th_=2.8
+                elif th < -3:
+                    th_=-2.8
+                else:
+                    th_ = th
+                t.plot(fb_,th_,arrow,frameN)
                 t.draw()
             else:
                 text_5.draw()
