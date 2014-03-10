@@ -245,7 +245,7 @@ if trials.trialList in ([], [None], None):  params=[]
 else:  params = trials.trialList[0].keys()
 #save data for this loop
 trials.saveAsPickle(filename+'trials')
-trials.saveAsExcel(filename+'.csv', sheetName='trials',
+trials.saveAsExcel(filename+'.xlsx', sheetName='trials',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
