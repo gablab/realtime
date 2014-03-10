@@ -28,7 +28,7 @@ logFile=logging.LogFile(filename+'.log', level=logging.INFO)
 logging.console.setLevel(logging.WARNING)#this outputs to the screen, not a file
 
 #setup the Window
-win = visual.Window(size=(640, 480), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+win = visual.Window(size=(640, 480), fullscr=False, screen=0, allowGUI=False, allowStencil=False,
     monitor=u'testMonitor', color=u'black', colorSpace=u'rgb')
 
 #Initialise components for routine:hello1
@@ -40,7 +40,7 @@ hello_hello=visual.TextStim(win=win, ori=0, name='hello_hello',
     color='white', colorSpace='rgb', opacity=1,
     depth=0.0)
 instruction1=visual.TextStim(win=win, ori=0, name='instruction1',
-    text=u'You will be presented with a sequence of letter sounds over headphones and with a sequence of geometric pictures on the screen.\n\nYou either focus on the screen, the sound, or on both at the same time. Whether you have to focus on the sound, the screen or on both is indicated by icons on the screen.',
+    text=u'You will be presented with a sequence of letter sounds over headphones and with a sequence of geometric pictures on the screen.\nYou either focus on the screen, the sound, or on both at the same time. Whether you have to focus on the sound, the screen or on both is indicated by icons on the screen.',
     font=u'Arial',
     pos=[0, 0.5], height=0.08,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
@@ -48,7 +48,7 @@ instruction1=visual.TextStim(win=win, ori=0, name='instruction1',
 instruction2=visual.TextStim(win=win, ori=0, name='instruction2',
     text=u'Compare the current sound/picture to the one presented two items prior to the current one in the sequence. If the current and the sound/picture presented two items prior are identical you press the left button with your index finger as quickly as possible. \n',
     font=u'Arial',
-    pos=[0, -0.35], height=0.08,wrapWidth=None,
+    pos=[0, -0.40], height=0.08,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-1.0)
 #earpic=visual.PatchStim(win=win, name='earpic',
@@ -75,7 +75,7 @@ instruction2=visual.TextStim(win=win, ori=0, name='instruction2',
 instruction4=visual.TextStim(win=win, ori=0, name='instruction4',
     text=u'Please press the button when you are ready',
     font=u'Arial',
-    pos=[0, -0.8], height=0.08,wrapWidth=None,
+    pos=[0, -0.85], height=0.08,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-6.0)
 
@@ -93,8 +93,7 @@ get_ready=visual.TextStim(win=win, ori=0, name='get_ready',
 trialClock=core.Clock()
 task=visual.TextStim(win=win, ori=0, name='task',
     text='nonsense',
-    font='Arial',
-    units='pix', pos=[.5, .5], height=50,wrapWidth=None,
+    font='Arial', pos=[0, .8],wrapWidth=None,
     color='white', colorSpace='rgb', opacity=1.0,
     depth=0.0)
 show_visual=visual.PatchStim(win=win, name='show_visual',units='pix', 

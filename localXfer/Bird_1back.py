@@ -91,7 +91,7 @@ get_ready=visual.TextStim(win=win, ori=0, name='get_ready',
 trialClock=core.Clock()
 task=visual.PatchStim(win=win, name='task',
     tex='sin', mask=None,
-    ori=0, pos=[0, 0.75], size=[0.5, 0.5], sf=None, phase=0.0,
+    ori=0, pos=[0, 0.80], size=[0.4, 0.4], sf=None, phase=0.0,
     color=[1,1,1], colorSpace='rgb', opacity=1.0,
     texRes=128, interpolate=False, depth=-2.0)
 show_visual=visual.PatchStim(win=win, name='show_visual',units='pix', 
@@ -102,7 +102,7 @@ show_visual=visual.PatchStim(win=win, name='show_visual',units='pix',
 rest1=visual.TextStim(win=win, ori=0, name='Rest',
     text=u'Rest',
     font=u'Arial',
-    pos=[0, 0.75], height=0.1,wrapWidth=None,
+    pos=[0, 0.80], height=0.1,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-6.0)
 

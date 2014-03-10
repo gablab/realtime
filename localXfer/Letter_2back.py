@@ -45,7 +45,7 @@ hello_hello=visual.TextStim(win=win, ori=0, name='hello_hello',
     color='white', colorSpace='rgb', opacity=1,
     depth=0.0)
 instruction1=visual.TextStim(win=win, ori=0, name='instruction1',
-    text=u'You will be presented with a sequence of letter sounds over headphones and with a sequence of geometric pictures on the screen.\n\nYou either focus on the screen, the sound, or on both at the same time. Whether you have to focus on the sound, the screen or on both is indicated by icons on the screen.',
+    text=u'You will be presented with a sequence of letter sounds over headphones and with a sequence of geometric pictures on the screen.\nYou either focus on the screen, the sound, or on both at the same time. Whether you have to focus on the sound, the screen or on both is indicated by icons on the screen.',
     font=u'Arial',
     pos=[0, 0.5], height=0.08,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
@@ -53,7 +53,7 @@ instruction1=visual.TextStim(win=win, ori=0, name='instruction1',
 instruction2=visual.TextStim(win=win, ori=0, name='instruction2',
     text=u'Compare the current sound/picture to one presented two items prior to the current one in the sequence. If the current and the sound/picture two items back are identical you press the left button with your index finger as quickly as possible. \n',
     font=u'Arial',
-    pos=[0, -0.35], height=0.08,wrapWidth=None,
+    pos=[0, -0.40], height=0.08,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-1.0)
 #earpic=visual.PatchStim(win=win, name='earpic',
@@ -98,7 +98,7 @@ get_ready=visual.TextStim(win=win, ori=0, name='get_ready',
 trialClock=core.Clock()
 task=visual.PatchStim(win=win, name='task',
     tex='sin', mask=None,
-    ori=0, pos=[0, 0.75], size=[0.5, 0.5], sf=None, phase=0.0,
+    ori=0, pos=[0, 0.80], size=[0.4, 0.4], sf=None, phase=0.0,
     color=[1,1,1], colorSpace='rgb', opacity=1.0,
     texRes=128, interpolate=False, depth=-1.0)
 
@@ -115,7 +115,7 @@ background=visual.PatchStim(win=win, name='background',units='pix',
 rest1=visual.TextStim(win=win, ori=0, name='Rest',
     text=u'Rest',
     font=u'Arial',
-    pos=[0, 0.75], height=0.1,wrapWidth=None,
+    pos=[0, 0.80], height=0.1,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-6.0)
 

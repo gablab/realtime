@@ -30,7 +30,7 @@ logFile=logging.LogFile(filename+'.log', level=logging.INFO)
 logging.console.setLevel(logging.WARNING)#this outputs to the screen, not a file
 
 #setup the Window
-win = visual.Window(size=(640, 480), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+win = visual.Window(size=(640, 480), fullscr=False, screen=0, allowGUI=False, allowStencil=False,
     monitor=u'testMonitor', color=u'black', colorSpace=u'rgb')
 
 #Initialise components for routine:hello1
@@ -50,7 +50,7 @@ instruction1=visual.TextStim(win=win, ori=0, name='instruction1',
 instruction2=visual.TextStim(win=win, ori=0, name='instruction2',
     text=u'Compare the current sound/picture to one presented prior to the current one in the sequence. If the current and the previous sound/picture are identical you press the left button with your index finger as quickly as possible. \n\n',
     font=u'Arial',
-    pos=[0, -0.35], height=0.08,wrapWidth=None,
+    pos=[0, -0.40], height=0.08,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-1.0)
 #earpic=visual.PatchStim(win=win, name='earpic',
@@ -96,7 +96,7 @@ trialClock=core.Clock()
 
 task=visual.PatchStim(win=win, name='task',
     tex='sin', mask=None,
-    ori=0, pos=[0, 0.75], size=[0.5, 0.5], sf=None, phase=0.0,
+    ori=0, pos=[0, 0.80], size=[0.4, 0.4], sf=None, phase=0.0,
     color=[1,1,1], colorSpace='rgb', opacity=1.0,
     texRes=128, interpolate=False, depth=-1.0)
 
@@ -115,7 +115,7 @@ background=visual.PatchStim(win=win, name='background',units='pix',
 rest1=visual.TextStim(win=win, ori=0, name='Rest',
     text=u'Rest',
     font=u'Arial',
-    pos=[0, 0.75], height=0.1,wrapWidth=None,
+    pos=[0, 0.80], height=0.1,wrapWidth=None,
     color=u'white', colorSpace=u'rgb', opacity=1,
     depth=-6.0)
 
@@ -300,7 +300,7 @@ for thisComponent in helloComponents:
 #set up handler to look after randomisation of conditions etc
 trials=data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=None,
-    trialList=data.importConditions('Run-Designs/practice_new_letter_nback1.xlsx'),
+    trialList=data.importConditions('Run-Designs/practice_new_letter_nback1.xslx'),
     seed=None)
 thisTrial=trials.trialList[0]#so we can initialise stimuli with some values
 #abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)
