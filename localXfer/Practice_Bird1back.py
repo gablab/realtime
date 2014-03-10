@@ -418,7 +418,7 @@ trials.saveAsPickle(filename+'trials')
 trials.saveAsExcel(filename+'.xlsx', sheetName='trials',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])
-trials.saveAsText(filename+'trials.xlsx', delim=',',
+trials.saveAsText(filename+'trials.csv', delim=',',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
