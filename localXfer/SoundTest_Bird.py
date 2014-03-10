@@ -46,7 +46,7 @@ sound_1.setVolume(1)
 
 #set up handler to look after randomisation of conditions etc
 trials=data.TrialHandler(nReps=10, method='sequential', originPath=None,
-    trialList=data.importConditions('test_sounds_bird.csv'),
+    trialList=data.importConditions('test_sounds_bird.xlsx'),
     seed=1)
 thisTrial=trials.trialList[0]#so we can initialise stimuli with some values
 #abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)

@@ -142,7 +142,7 @@ for thisComponent in startComponents:
 #set up handler to look after randomisation of conditions etc
 trials=data.TrialHandler(nReps=20, method=u'sequential', 
     extraInfo=expInfo, originPath=None,
-    trialList=data.importConditions(u'test_sounds_bird.csv'),
+    trialList=data.importConditions(u'test_sounds_bird.xlsx'),
     seed=1)
 thisTrial=trials.trialList[0]#so we can initialise stimuli with some values
 #abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)

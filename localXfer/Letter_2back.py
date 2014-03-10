@@ -301,7 +301,7 @@ for thisComponent in helloComponents:
 #set up handler to look after randomisation of conditions etc
 trials=data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=None,
-    trialList=data.importConditions('Run-Designs/letter_nback2.csv'),
+    trialList=data.importConditions('Run-Designs/letter_nback2.xlsx'),
     seed=None)
 thisTrial=trials.trialList[0]#so we can initialise stimuli with some values
 #abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)
