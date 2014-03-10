@@ -46,7 +46,7 @@ sound_1.setVolume(1)
 
 #set up handler to look after randomisation of conditions etc
 trials=data.TrialHandler(nReps=10, method='sequential', originPath=None,
-    trialList=data.importConditions('test_sounds_bird.xlsx'),
+    trialList=data.importConditions('test_sounds_bird.csv'),
     seed=1)
 thisTrial=trials.trialList[0]#so we can initialise stimuli with some values
 #abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)
@@ -146,7 +146,7 @@ if trials.trialList in ([], [None], None):  params=[]
 else:  params = trials.trialList[0].keys()
 #save data for this loop
 trials.saveAsPickle(filename+'trials')
-trials.saveAsExcel(filename+'.xlsx', sheetName='trials',
+trials.saveAsExcel(filename+'.csv', sheetName='trials',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])
 

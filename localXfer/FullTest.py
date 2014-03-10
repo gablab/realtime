@@ -35,7 +35,7 @@ logFile=logging.LogFile(filename+'.log', level=logging.EXP)
 logging.console.setLevel(logging.WARNING)#this outputs to the screen, not a file
 
 #setup the Window
-win = visual.Window(size=(1280, 1024), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+win = visual.Window(size=(640,480), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb')
 
 #Initialise components for routine:start
@@ -142,7 +142,7 @@ for thisComponent in startComponents:
 #set up handler to look after randomisation of conditions etc
 trials=data.TrialHandler(nReps=20, method=u'sequential', 
     extraInfo=expInfo, originPath=None,
-    trialList=data.importConditions(u'test_sounds_bird.xlsx'),
+    trialList=data.importConditions(u'test_sounds_bird.csv'),
     seed=1)
 thisTrial=trials.trialList[0]#so we can initialise stimuli with some values
 #abbreviate parameter names if possible (e.g. rgb=thisTrial.rgb)
@@ -245,7 +245,7 @@ if trials.trialList in ([], [None], None):  params=[]
 else:  params = trials.trialList[0].keys()
 #save data for this loop
 trials.saveAsPickle(filename+'trials')
-trials.saveAsExcel(filename+'.xlsx', sheetName='trials',
+trials.saveAsExcel(filename+'.csv', sheetName='trials',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
